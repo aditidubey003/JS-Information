@@ -44,3 +44,45 @@ alert(1);
 } else{
   alert(0);
 }
+
+// Task - 4
+// Rewrite 'if' into '?'
+
+// Rewrite this if using the conditional operator '?':
+
+let result;
+
+if (a + b < 4) {
+  result = 'Below';
+} else {
+  result = 'Over';
+}
+
+let result = (a + b < 4) ? 'Below':'Over';
+
+
+// Task - 5
+// Rewrite 'if..else' into '?'
+
+// Rewrite if..else using multiple ternary operators '?'.
+
+// For readability, it’s recommended to split the code into multiple lines.
+
+let message;
+
+if (login == 'Employee') {
+  message = 'Hello';
+} else if (login == 'Director') {
+  message = 'Greetings';
+} else if (login == '') {
+  message = 'No login';
+} else {
+  message = '';
+}
+
+let message = (login == 'Employee') ? 'Hello':
+(login == 'Director') ? 'Greetings':
+(login == '') ? 'No login':
+'';
+
+alert(message);
