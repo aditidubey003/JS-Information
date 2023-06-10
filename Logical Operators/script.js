@@ -39,14 +39,25 @@ alert( null || 2 && 3 || 4 );
 // null || 3 || 4 =  3
 
 
-// Task - 7
+// Task - 6
 //Check the range outside
 
 // Write an if condition to check that age is NOT between 14 and 90 inclusively.
-
+let age = +prompt('Enter your Age')
+// First Variant
+if(!(age >= 14 && age <= 90)){
+    alert(true)
+ }
 // Create two variants: the first one using NOT !, the second one – without it.
+// Second variant
 
-// Task - 8 
+if(!(age < 14 && age > 90)){
+    alert(true)
+ }
+
+
+
+// Task - 7 
 // Check the range between
 let age = +prompt('Enter your Age')
 // Write an if condition to check that age is between 14 and 90 inclusively.
@@ -55,24 +66,39 @@ alert(true)
 }
 // “Inclusively” means that age can reach the edges 14 or 90.
 
-// TAsk -9 
+// TAsk -8 
 // A question about "if"
 
 // Which of these alerts are going to execute?
 
 // What will the results of the expressions be inside if(...)?
 
-if (-1 || 0) alert( 'first' );
-if (-1 && 0) alert( 'second' );
-if (null || -1 && 1) alert( 'third' );
+if (-1 || 0) alert( 'first' ); // -1
+if (-1 && 0) alert( 'second' ); // 0
+if (null || -1 && 1) alert( 'third' ); // null || 1 = 1
 
+// 
 // Task - 9
 // Check the login
 
 // Write the code which asks for a login with prompt.
-
+let visitor = prompt('Who are you ?')
 // If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
-
+if(visitor  === "Admin"){
+    
+    let password = prompt('Enter the password') ;
+    if(password === "TheMaster"){
+        alert("Welcome!")
+    } else if (password === '' || password === null){
+        alert("canceled")
+    } else {
+        alert('wrong password')
+    }
+} else if (visitor === '' || visitor === null){
+    alert("canceled")
+} else {
+    alert("We don't know you ")
+}
 // The password is checked as follows:
 
 // If it equals “TheMaster”, then show “Welcome!”,
